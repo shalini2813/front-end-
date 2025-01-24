@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortener</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0-beta.3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="container mx-auto px-4 py-6">
+    <h1 class="text-4xl text-center font-bold mb-6">URL Shortener</h1>
+
+    <div class="flex justify-center mb-4">
+      <input type="url" id="urlInput" class="w-2/3 p-3 border border-gray-300 rounded-l-lg" placeholder="Enter your URL here..." required>
+      <button id="shortenBtn" class="bg-blue-500 text-white px-4 py-3 rounded-r-lg">Shorten</button>
+    </div>
+
+    <div id="shortenedOutput" class="hidden mt-4 text-center">
+      <p class="text-lg">Your shortened URL:</p>
+      <input type="text" id="shortenedUrl" readonly class="w-2/3 p-3 border border-gray-300 rounded-l-lg">
+      <button id="copyBtn" class="bg-green-500 text-white px-4 py-3 rounded-r-lg">Copy</button>
+    </div>
+
+    <div id="history" class="mt-6">
+      <h2 class="text-xl mb-4">History</h2>
+      <ul id="historyList" class="space-y-2"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
